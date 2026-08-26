@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" width="320" height="400" role="img">
+  <defs>
+    <linearGradient id="cat-wall" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F6F1E9"/>
+      <stop offset="1" stop-color="#EBE3D8"/>
+    </linearGradient>
+    <linearGradient id="cat-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCCFC0"/>
+      <stop offset="1" stop-color="#C6B7A6"/>
+    </linearGradient>
+    <linearGradient id="cat-sofa" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#EFE6DA"/>
+      <stop offset="1" stop-color="#DDD0BF"/>
+    </linearGradient>
+    <linearGradient id="cat-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#009FA3"/>
+      <stop offset="1" stop-color="#007377"/>
+    </linearGradient>
+    <linearGradient id="cat-glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#DFF3F7"/>
+      <stop offset="0.55" stop-color="#BFE4EC"/>
+      <stop offset="1" stop-color="#9FD2DE"/>
+    </linearGradient>
+    <linearGradient id="cat-beam" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="cat-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cat-shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#073B4C" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#073B4C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cat-soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="cat-grime" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="mono"
+        values="0 0 0 0 0.32  0 0 0 0 0.27  0 0 0 0 0.18  0 0 0 0.55 0"/>
+      <feComposite in="mono" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  
+  <rect width="320" height="400" fill="url(#cat-wall)"/>
+  <rect y="264" width="320" height="136" fill="url(#cat-floor)"/>
+  <rect y="250" width="320" height="14" fill="#FFFFFF" opacity="0.75"/>
+  <rect y="250" width="320" height="3" fill="#073B4C" opacity="0.06"/>
+  <ellipse cx="160" cy="264" rx="192" ry="64" fill="url(#cat-glow)" opacity="0.5"/>
+  <!-- glazed partition -->
+  <g opacity="0.55">
+    <rect x="192" y="48" width="115.19999999999999" height="216" fill="url(#cat-glass)" opacity="0.6"/>
+    <rect x="192" y="48" width="115.19999999999999" height="216" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M249.60000000000002 48 V264" stroke="#FFFFFF" stroke-width="4"/>
+  </g>
+  
+    <g>
+      <rect x="16" y="208" width="63" height="4.2" rx="4" fill="#EDE7DD"/>
+      <rect x="20.2" y="212.2" width="3.36" height="19.32" fill="#C6B7A6"/>
+      <rect x="71.44" y="212.2" width="3.36" height="19.32" fill="#C6B7A6"/>
+      <rect x="35.32" y="193.72" width="25.2" height="14.28" rx="3" fill="#073B4C" opacity="0.82"/>
+      <rect x="37" y="195.4" width="21.84" height="10.92" rx="2" fill="#7FD2D3" opacity="0.5"/>
+      <rect x="44.56" y="208.84" width="7.56" height="2.52" fill="#073B4C" opacity="0.3"/>
+      <g>
+        <rect x="39.52" y="217.24" width="17.64" height="5.04" rx="5" fill="#009FA3" opacity="0.85"/>
+        <rect x="41.2" y="206.32" width="14.28" height="11.76" rx="6" fill="#009FA3" opacity="0.65"/>
+        <rect x="47.08" y="222.28" width="2.52" height="9.24" fill="#073B4C" opacity="0.6"/>
+      </g>
+    </g>
+  
+    <g>
+      <rect x="198.4" y="200" width="46.8" height="3.12" rx="4" fill="#EDE7DD"/>
+      <rect x="201.52" y="203.12" width="2.5" height="14.35" fill="#C6B7A6"/>
+      <rect x="239.58" y="203.12" width="2.5" height="14.35" fill="#C6B7A6"/>
+      <rect x="212.75" y="189.39" width="18.72" height="10.61" rx="3" fill="#073B4C" opacity="0.82"/>
+      <rect x="214" y="190.64" width="16.22" height="8.11" rx="2" fill="#7FD2D3" opacity="0.5"/>
+      <rect x="219.62" y="200.62" width="5.62" height="1.87" fill="#073B4C" opacity="0.3"/>
+      <g>
+        <rect x="215.87" y="206.86" width="13.1" height="3.74" rx="5" fill="#009FA3" opacity="0.85"/>
+        <rect x="217.12" y="198.75" width="10.61" height="8.74" rx="6" fill="#009FA3" opacity="0.65"/>
+        <rect x="221.49" y="210.61" width="1.87" height="6.86" fill="#073B4C" opacity="0.6"/>
+      </g>
+    </g>
+  
+  <g>
+    <ellipse cx="176" cy="270" rx="9.52" ry="2.5199999999999996" fill="url(#cat-shadow)"/>
+    <ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(-80 176 249.44)"/><ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#2F8F6B" opacity="0.92"
+      transform="rotate(-54 176 249.44)"/><ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(-28 176 249.44)"/><ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#2F8F6B" opacity="0.92"
+      transform="rotate(-2 176 249.44)"/><ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(24 176 249.44)"/><ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#2F8F6B" opacity="0.92"
+      transform="rotate(50 176 249.44)"/><ellipse cx="176" cy="237.12" rx="4.2" ry="12.88"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(76 176 249.44)"/>
+    <path d="M168.72 251.12 h 14.559999999999999 l -1.9599999999999997 12.879999999999999 h -10.639999999999999 Z" fill="#EBE3D8"/>
+    <path d="M168.72 251.12 h 14.559999999999999 l -0.8399999999999999 3.3599999999999994 h -12.879999999999999 Z" fill="#C6B7A6" opacity="0.6"/>
+  </g>
+  
+  <path d="M44.39 119.76 Q44.39 135.11 59.75 135.11 Q44.39 135.11 44.39 150.47 Q44.39 135.11 29.03 135.11 Q44.39 135.11 44.39 119.76 Z"
+      fill="#F5C542" opacity="0.85"/><path d="M171.75 132.76 Q171.75 141.06 180.05 141.06 Q171.75 141.06 171.75 149.36 Q171.75 141.06 163.45 141.06 Q171.75 141.06 171.75 132.76 Z"
+      fill="#F5C542" opacity="0.8"/><path d="M144.35 152.01 Q144.35 160.89 153.23 160.89 Q144.35 160.89 144.35 169.77 Q144.35 160.89 135.46 160.89 Q144.35 160.89 144.35 152.01 Z"
+      fill="#F5C542" opacity="0.7"/><path d="M57.13 129.28 Q57.13 139.03 66.88 139.03 Q57.13 139.03 57.13 148.79 Q57.13 139.03 47.37 139.03 Q57.13 139.03 57.13 129.28 Z"
+      fill="#F5C542" opacity="0.86"/><path d="M50.19 148.85 Q50.19 157.79 59.13 157.79 Q50.19 157.79 50.19 166.73 Q50.19 157.79 41.25 157.79 Q50.19 157.79 50.19 148.85 Z"
+      fill="#F5C542" opacity="0.59"/></svg>

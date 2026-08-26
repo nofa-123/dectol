@@ -1,0 +1,166 @@
+/**
+ * DOCTOL Design Tokens
+ * Single source of truth for colour, type, space, radius, elevation and motion.
+ * Components must never hard-code raw hex values — always reference a token.
+ */
+
+:root {
+  /* ---------- Brand ---------- */
+  --dt-teal-50: #f1faf9;
+  --dt-teal-100: #ddf3f2;
+  --dt-teal-200: #b9e6e6;
+  --dt-teal-300: #7fd2d3;
+  --dt-teal-400: #35b7ba;
+  --dt-teal-500: #009fa3; /* primary */
+  --dt-teal-600: #008c90;
+  --dt-teal-700: #007377;
+  --dt-teal-800: #045b60;
+
+  --dt-navy-500: #0d5468;
+  --dt-navy-600: #094354;
+  --dt-navy-700: #073b4c; /* brand navy */
+  --dt-navy-800: #052a37;
+  --dt-navy-900: #041e28;
+
+  --dt-gold-300: #fadd8c;
+  --dt-gold-400: #f7cf62;
+  --dt-gold-500: #f5c542; /* accent */
+  --dt-gold-600: #dba91f;
+
+  /* ---------- Neutrals ---------- */
+  --dt-white: #ffffff;
+  --dt-canvas: #f7fbfb;
+  --dt-surface: #ffffff;
+  --dt-surface-sunken: #f2f7f8;
+  --dt-ink: #0b1f27;
+  --dt-ink-soft: #33525e;
+  --dt-muted: #5f7d89;
+  --dt-muted-soft: #8aa2ac;
+  --dt-line: #e3edef;
+  --dt-line-strong: #cddde1;
+
+  /* ---------- Semantic ---------- */
+  --dt-success: #12a06a;
+  --dt-success-soft: #e6f6ef;
+  --dt-warning: #d9880c;
+  --dt-warning-soft: #fdf3e2;
+  --dt-danger: #d64550;
+  --dt-danger-soft: #fdeced;
+  --dt-info: var(--dt-teal-500);
+
+  /* ---------- Aliases ---------- */
+  --dt-primary: var(--dt-teal-500);
+  --dt-primary-hover: var(--dt-teal-600);
+  --dt-primary-press: var(--dt-teal-700);
+  --dt-on-primary: #ffffff;
+  --dt-focus-ring: color-mix(in srgb, var(--dt-teal-500) 45%, transparent);
+
+  /* ---------- Gradients ---------- */
+  --dt-grad-primary: linear-gradient(135deg, #009fa3 0%, #007f83 100%);
+  --dt-grad-deep: linear-gradient(140deg, #073b4c 0%, #05606a 55%, #009fa3 130%);
+  --dt-grad-mint: linear-gradient(160deg, #f1faf9 0%, #ffffff 70%);
+  --dt-grad-gold: linear-gradient(135deg, #f7cf62 0%, #e6ac21 100%);
+  --dt-grad-sheen: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgb(255 255 255 / 0.55) 50%,
+    transparent 80%
+  );
+
+  /* ---------- Typography ---------- */
+  /* Lama Sans is the brand face; the rest are metric-adjacent fallbacks that
+     keep Arabic readable during the swap and on the rare unsupported client. */
+  --dt-font: 'Lama Sans', 'IBM Plex Sans Arabic', 'Tajawal', 'Segoe UI', system-ui,
+    -apple-system, sans-serif;
+  --dt-fw-regular: 400;
+  --dt-fw-medium: 500;
+  --dt-fw-semibold: 600;
+  --dt-fw-bold: 700;
+
+  /* Fluid type — clamps between the 390px and 1440px breakpoints */
+  --dt-fs-display: clamp(2.15rem, 1.35rem + 3.4vw, 4rem);
+  --dt-fs-h1: clamp(1.85rem, 1.25rem + 2.5vw, 3rem);
+  --dt-fs-h2: clamp(1.5rem, 1.15rem + 1.5vw, 2.25rem);
+  --dt-fs-h3: clamp(1.2rem, 1.05rem + 0.7vw, 1.55rem);
+  --dt-fs-h4: clamp(1.05rem, 0.98rem + 0.35vw, 1.2rem);
+  --dt-fs-body-lg: clamp(1rem, 0.96rem + 0.25vw, 1.125rem);
+  --dt-fs-body: 1rem;
+  --dt-fs-sm: 0.875rem;
+  --dt-fs-xs: 0.78rem;
+
+  --dt-lh-tight: 1.22;
+  --dt-lh-snug: 1.4;
+  --dt-lh-normal: 1.75;
+
+  /* ---------- Space (4pt base) ---------- */
+  --dt-space-1: 0.25rem;
+  --dt-space-2: 0.5rem;
+  --dt-space-3: 0.75rem;
+  --dt-space-4: 1rem;
+  --dt-space-5: 1.25rem;
+  --dt-space-6: 1.5rem;
+  --dt-space-8: 2rem;
+  --dt-space-10: 2.5rem;
+  --dt-space-12: 3rem;
+  --dt-space-16: 4rem;
+  --dt-space-20: 5rem;
+
+  /* Section rhythm scales with viewport so mobile never feels airy-empty */
+  --dt-section-y: clamp(3rem, 2rem + 5vw, 6.5rem);
+  --dt-gutter: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --dt-container: 1240px;
+
+  /* ---------- Radius ---------- */
+  --dt-radius-xs: 8px;
+  --dt-radius-sm: 12px;
+  --dt-radius-md: 16px;
+  --dt-radius-lg: 22px;
+  --dt-radius-xl: 28px;
+  --dt-radius-2xl: 36px;
+  --dt-radius-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --dt-shadow-xs: 0 1px 2px rgb(7 59 76 / 0.06);
+  --dt-shadow-sm: 0 2px 8px rgb(7 59 76 / 0.06), 0 1px 2px rgb(7 59 76 / 0.04);
+  --dt-shadow-md: 0 8px 24px -8px rgb(7 59 76 / 0.14), 0 2px 6px rgb(7 59 76 / 0.05);
+  --dt-shadow-lg: 0 20px 48px -16px rgb(7 59 76 / 0.2), 0 4px 12px rgb(7 59 76 / 0.06);
+  --dt-shadow-xl: 0 36px 80px -24px rgb(7 59 76 / 0.28), 0 8px 20px rgb(7 59 76 / 0.08);
+  --dt-shadow-teal: 0 16px 32px -12px rgb(0 159 163 / 0.45);
+  --dt-shadow-inset: inset 0 1px 0 rgb(255 255 255 / 0.6);
+
+  /* ---------- Motion ---------- */
+  --dt-dur-1: 140ms;
+  --dt-dur-2: 220ms;
+  --dt-dur-3: 320ms;
+  --dt-dur-4: 480ms;
+  --dt-dur-5: 700ms;
+  --dt-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dt-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dt-ease-spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  /* ---------- Layout constants ---------- */
+  --dt-header-h: 72px;
+  --dt-mobilenav-h: 68px;
+  --dt-z-header: 900;
+  --dt-z-mobilenav: 880;
+  --dt-z-drawer: 950;
+  --dt-z-modal: 1000;
+  --dt-z-toast: 1100;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --dt-header-h: 84px;
+  }
+}
+
+/* Motion is opt-out at the token level so every animation respects it at once. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dt-dur-1: 1ms;
+    --dt-dur-2: 1ms;
+    --dt-dur-3: 1ms;
+    --dt-dur-4: 1ms;
+    --dt-dur-5: 1ms;
+  }
+}

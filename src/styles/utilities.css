@@ -1,0 +1,258 @@
+/**
+ * DOCTOL utilities — layout primitives, reveal animations, shared surface recipes.
+ * Kept deliberately small: anything used by 3+ components lives here, everything
+ * else stays scoped inside its component.
+ */
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--dt-container);
+  margin-inline: auto;
+  padding-inline: var(--dt-gutter);
+}
+
+.container--wide {
+  max-width: 1440px;
+}
+
+.section {
+  padding-block: var(--dt-section-y);
+  position: relative;
+}
+
+.section--tight {
+  padding-block: calc(var(--dt-section-y) * 0.62);
+}
+
+.section--mint {
+  background: var(--dt-grad-mint);
+}
+
+.section--sunken {
+  background: var(--dt-surface-sunken);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dt-space-3);
+}
+
+/* ---------- Accessibility ---------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Surfaces ---------- */
+.card-surface {
+  background: var(--dt-surface);
+  border: 1px solid var(--dt-line);
+  border-radius: var(--dt-radius-lg);
+  box-shadow: var(--dt-shadow-sm);
+}
+
+.glass-surface {
+  background: rgb(255 255 255 / 0.72);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgb(255 255 255 / 0.6);
+}
+
+/* ---------- Text helpers ---------- */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dt-space-2);
+  font-size: var(--dt-fs-sm);
+  font-weight: var(--dt-fw-semibold);
+  color: var(--dt-teal-600);
+  background: var(--dt-teal-50);
+  border: 1px solid var(--dt-teal-100);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--dt-radius-pill);
+}
+
+.text-muted {
+  color: var(--dt-muted);
+}
+
+.lead {
+  font-size: var(--dt-fs-body-lg);
+  color: var(--dt-ink-soft);
+  line-height: var(--dt-lh-normal);
+}
+
+/* ---------- Scroll reveal ----------
+   Elements marked with v-reveal start hidden and are released by an
+   IntersectionObserver adding [data-revealed]. If JS never runs the
+   content still shows, because .no-js short-circuits the hidden state. */
+[data-reveal] {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition:
+    opacity var(--dt-dur-5) var(--dt-ease-out),
+    transform var(--dt-dur-5) var(--dt-ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal='up'] {
+  transform: translate3d(0, 28px, 0);
+}
+[data-reveal='down'] {
+  transform: translate3d(0, -22px, 0);
+}
+[data-reveal='start'] {
+  transform: translate3d(32px, 0, 0); /* RTL: enters from the right */
+}
+[data-reveal='end'] {
+  transform: translate3d(-32px, 0, 0);
+}
+[data-reveal='scale'] {
+  transform: scale(0.94);
+}
+[data-reveal='fade'] {
+  transform: none;
+}
+
+[data-revealed] {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Horizontal scroll rails (mobile carousels) ---------- */
+.rail {
+  display: flex;
+  gap: var(--dt-space-4);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-block-end: var(--dt-space-2);
+  /* Bleed to the viewport edges so cards peek past the container. */
+  margin-inline: calc(var(--dt-gutter) * -1);
+  padding-inline: var(--dt-gutter);
+}
+
+.rail::-webkit-scrollbar {
+  display: none;
+}
+
+.rail > * {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
+
+/* ---------- Skeleton loading ---------- */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--dt-surface-sunken);
+  border-radius: var(--dt-radius-sm);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dt-grad-sheen);
+  translate: -100% 0;
+  animation: dt-sheen 1.4s infinite;
+}
+
+@keyframes dt-sheen {
+  to {
+    translate: 100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after {
+    animation: none;
+  }
+}
+
+/* ---------- Shared keyframes ---------- */
+@keyframes dt-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes dt-pulse-ring {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+@keyframes dt-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* ---------- Route transitions ---------- */
+.route-fade-enter-active,
+.route-fade-leave-active {
+  transition:
+    opacity var(--dt-dur-3) var(--dt-ease-out),
+    transform var(--dt-dur-3) var(--dt-ease-out);
+}
+
+.route-fade-enter-from {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+}
+
+.route-fade-leave-to {
+  opacity: 0;
+  transform: translate3d(0, -8px, 0);
+}
+
+/**
+ * `.mobile-hidden` — kept in the DOM for desktop, removed from the phone
+ * layout. Used on the home page for sections the mobile design doesn't include,
+ * and for the two that would otherwise duplicate a new section (WhyDoctol
+ * repeats the trust strip; ExperienceTimeline repeats "كيف نخدمك؟").
+ */
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none;
+  }
+}

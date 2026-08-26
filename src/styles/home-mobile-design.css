@@ -1,0 +1,739 @@
+/*
+ * Home-page visual overrides for phones only.
+ * All Vue components, stores, routes and booking behaviour remain untouched.
+ */
+@media (max-width: 767px) {
+  :root {
+    --dt-gutter: 14px;
+    --dt-section-y: 30px;
+    --dt-header-h: 76px;
+    --dt-mobilenav-h: 76px;
+  }
+
+  body { background: #fff; }
+  .container { width: 100%; padding-inline: var(--dt-gutter); }
+  .section { padding-block: var(--dt-section-y); }
+
+  /* Hero: photo and message proportions from the supplied mobile artwork. */
+  .hero { height: 452px; min-height: 452px; }
+  .hero__inner { height: 452px; min-height: 452px; }
+  .hero__visual-wrap,
+  .hero__parallax,
+  .hero__visual { height: 100%; }
+  .hero__visual picture,
+  .hero__visual img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 38% center;
+  }
+  .hero__inner::after {
+    background: linear-gradient(to left, rgb(255 255 255 / .98) 0%, rgb(255 255 255 / .92) 34%, rgb(255 255 255 / .42) 63%, transparent 88%);
+  }
+  .hero__copy {
+    position: absolute;
+    inset-inline-start: 4%;
+    inset-inline-end: auto;
+    inset-block-start: 138px;
+    width: 43%;
+    max-width: 43%;
+    margin: 0;
+    padding: 0;
+    gap: 14px;
+    align-items: flex-start;
+    text-align: start;
+  }
+  .hero__title {
+    width: 100%;
+    font-size: clamp(1.75rem, 7.4vw, 2.25rem);
+    line-height: 1.42;
+  }
+  .hero__checks { width: 100%; gap: 8px; font-size: 13px; }
+  .hero__checks li { white-space: nowrap; }
+  .hero__actions,
+  .hero__actions > * { width: 100%; }
+  .hero__actions .btn { min-height: 48px; justify-content: center; border-radius: 999px; font-size: 17px; }
+
+  /* Shortcut card directly below the hero. */
+  .ql { margin-block-start: 0; padding: 10px 12px 0; background: #fff; }
+  .ql .container { padding: 0; }
+  .ql__rail { width: 100%; padding: 13px 0; border-radius: 18px; overflow: hidden; }
+  .ql__item { flex: 1 1 20%; }
+  .ql__link { width: 100%; min-width: 0; padding-inline: 2px; }
+  .ql__label { font-size: 11px; }
+
+  /* Compact headings used throughout the reference. */
+  .sh { gap: 7px; margin-block-end: 16px; }
+  .sh__text { gap: 5px; }
+  .sh__eyebrow { display: none; }
+  .sh__title { color: var(--dt-navy-700); font-size: 22px; }
+  .sh__subtitle { color: var(--dt-muted); font-size: 13px; line-height: 1.55; }
+  .sh__action { align-self: flex-start; }
+  .sh__action .btn { min-height: 38px; padding: 6px 13px; font-size: 12px; }
+
+  /* Service cards: three tall cards at the same visible scale as the design. */
+  .services__rail { margin-inline: -14px; padding-inline: 14px; gap: 12px; }
+  .services__rail-item { width: min(31vw, 138px); }
+  .services__rail-item .sc { min-height: 278px; border-radius: 15px; }
+  .services__rail-item .sc__media { height: 130px; }
+  .services__controls { margin-block-start: 12px; }
+
+  /* Four trust cards across one row. */
+  .ts { padding-block: 18px 28px; background: #fff; }
+  .ts__grid { grid-template-columns: repeat(4, 1fr); gap: 7px; }
+  .ts__card { min-height: 130px; padding: 10px 5px; border-radius: 14px; }
+  .ts__icon { width: 42px; height: 42px; }
+  .ts__title { font-size: 12px; text-align: center; }
+  .ts__text { font-size: 9px; line-height: 1.55; text-align: center; }
+
+  /* Offer and package cards occupy almost the full phone width. */
+  .offers__rail { margin-inline: -14px; padding-inline: 14px; }
+  .offers__item { width: min(88vw, 390px); }
+  .offers__item .oc { min-height: 210px; border-radius: 16px; }
+  .packages__grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    margin-inline: -14px;
+    padding-inline: 14px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .packages__grid::-webkit-scrollbar { display: none; }
+  .packages__grid > li { flex: 0 0 min(88vw, 390px); scroll-snap-align: start; }
+  .packages__grid .pc { min-height: 230px; border-radius: 16px; }
+
+  /* Rewards and before/after retain their original interactivity. */
+  .rw__grid { grid-template-columns: 1.6fr 1fr; gap: 8px; }
+  .rw__card { min-height: 150px; padding: 12px; border-radius: 14px; }
+  .rw__title { font-size: 15px; }
+  .rw__text { font-size: 10px; }
+  .rw__cta { min-height: 32px; padding: 5px 12px; font-size: 11px; }
+  .ba-sec__layout { gap: 10px; }
+  .ba-sec__stage { border-radius: 15px; }
+
+  /* Four booking steps in one line, like the third supplied screen. */
+  .hws { background: #fff; text-align: center; }
+  .hws__head { text-align: center; }
+  .hws__title { font-size: 25px; }
+  .hws__steps { grid-template-columns: repeat(4, 1fr); gap: 4px; }
+  .hws__step { min-width: 0; padding-inline: 2px; }
+  .hws__tile { width: 62px; height: 62px; margin-inline: auto; border-radius: 14px; }
+  .hws__step-title { font-size: 11px; }
+  .hws__step-text { font-size: 9px; line-height: 1.65; }
+
+  .gb { padding-block: 4px 24px; }
+  .gb__card { min-height: 190px; padding: 20px; border-radius: 18px; }
+  .gb__title { font-size: 20px; }
+  .gb__text { font-size: 12px; }
+
+  /* Review summary and lead testimonial. */
+  .rv__summary { border-radius: 16px; overflow: hidden; }
+  .rv__rail { margin-inline: -14px; padding-inline: 14px; }
+  .rv__item { width: min(88vw, 390px); }
+  .rv__item .rc { min-height: 235px; border-radius: 16px; }
+
+  /* Three article cards across the visible mobile rail. */
+  .blog__grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 9px;
+    margin-inline: -14px;
+    padding-inline: 14px;
+    scrollbar-width: none;
+  }
+  .blog__grid::-webkit-scrollbar { display: none; }
+  .blog__grid > li { flex: 0 0 min(30vw, 135px); }
+  .blog__grid .bc { min-height: 185px; border-radius: 13px; }
+
+  /* Compact FAQ rows and final CTA. */
+  .faq__list { gap: 6px; }
+  .faq__item { border-radius: 12px; }
+  .faq__trigger { min-height: 48px; padding: 7px 10px; }
+  .faq__question { font-size: 11px; }
+  .faq__help { display: none; }
+  .cta { margin: 0 14px 18px; border-radius: 16px; overflow: hidden; }
+  .cta__inner { min-height: 130px; padding: 12px; }
+
+  /* Footer and fixed navigation remain the original functional components. */
+  .footer { border-radius: 26px 26px 0 0; padding-block-end: calc(var(--dt-mobilenav-h) + 18px); }
+  .mnav { border-radius: 26px 26px 0 0; }
+
+  /* Precise card proportions. These rules only restyle the original,
+     fully-wired components; no links, click handlers or booking calls change. */
+  body #main .services__rail-item .sc__media {
+    aspect-ratio: auto;
+    height: 124px;
+  }
+  body #main .services__rail-item .sc__icon {
+    inset-block-end: -18px;
+    inset-inline-end: 50%;
+    transform: translateX(50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }
+  body #main .services__rail-item .sc__body {
+    gap: 5px;
+    padding: 27px 9px 10px;
+    text-align: center;
+  }
+  body #main .services__rail-item .sc__name {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+  body #main .services__rail-item .sc__tagline,
+  body #main .services__rail-item .sc__summary {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    font-size: 9px;
+    line-height: 1.55;
+  }
+  body #main .services__rail-item .sc__summary { color: var(--dt-muted); }
+  body #main .services__rail-item .sc__tags,
+  body #main .services__rail-item .sc__meta { display: none; }
+  body #main .services__rail-item .sc__footer {
+    padding: 7px 8px 9px;
+    gap: 4px;
+  }
+  body #main .services__rail-item .sc__price-label,
+  body #main .services__rail-item .sc__price-unit { display: none; }
+  body #main .services__rail-item .sc__price-value { font-size: 15px; }
+  body #main .services__rail-item .sc__price-currency { font-size: 9px; }
+  body #main .services__rail-item .sc__fav { width: 29px; height: 29px; }
+  body #main .services__rail-item .sc__actions { gap: 3px; }
+  body #main .services__rail-item .sc__actions .btn {
+    min-height: 30px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  /* Horizontal promotional card: image left, live offer controls right. */
+  body #main .offers__item .oc {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 218px;
+    min-height: 218px;
+  }
+  body #main .offers__item .oc__media {
+    flex: 0 0 49%;
+    height: 100%;
+    aspect-ratio: auto;
+    position: relative;
+    z-index: 1;
+  }
+  body #main .offers__item .oc__body {
+    min-width: 0;
+    gap: 7px;
+    padding: 14px 11px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+  }
+  body #main .offers__item .oc__title { font-size: 16px; line-height: 1.35; }
+  body #main .offers__item .oc__subtitle { font-size: 10px; }
+  body #main .offers__item .oc__highlights { gap: 3px 5px; }
+  body #main .offers__item .oc__highlights li { font-size: 8px; }
+  body #main .offers__item .oc__pricing { gap: 4px; }
+  body #main .offers__item .oc__pricing .countdown { display: none; }
+  body #main .offers__item .oc__scarcity { display: none; }
+  body #main .offers__item .oc__body > .btn {
+    min-height: 36px;
+    margin-block-start: auto;
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+  body #main .offers__item .oc__ribbon {
+    inset-block-start: 10px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  /* Packages keep their expand and booking actions, in the compact artwork. */
+  body #main .packages__grid .pc {
+    display: grid;
+    grid-template-columns: 43% 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    column-gap: 10px;
+    row-gap: 6px;
+    min-height: 236px;
+    padding: 11px;
+  }
+  body #main .packages__grid .pc__toggle { display: contents; }
+  body #main .packages__grid .pc__media {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    min-height: 210px;
+    border-radius: 12px;
+  }
+  body #main .packages__grid .pc__media img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+  }
+  body #main .packages__grid .pc__head { grid-column: 2; grid-row: 1; }
+  body #main .packages__grid .pc__name { font-size: 15px; }
+  body #main .packages__grid .pc__tagline { font-size: 9px; }
+  body #main .packages__grid .pc__pricing {
+    grid-column: 2;
+    grid-row: 2;
+    gap: 4px;
+  }
+  body #main .packages__grid .pc__saving { padding: 3px 6px; font-size: 8px; }
+  body #main .packages__grid .pc__items {
+    grid-column: 2;
+    grid-row: 3;
+    gap: 3px;
+  }
+  body #main .packages__grid .pc__items li { gap: 4px; font-size: 9px; }
+  body #main .packages__grid .pc__item-icon { width: 22px; height: 22px; }
+  body #main .packages__grid .pc__details { grid-column: 2; padding: 6px; gap: 3px; }
+  body #main .packages__grid .pc__cta {
+    grid-column: 2;
+    grid-row: 4;
+    min-height: 34px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+  body #main .packages__grid .pc__flag {
+    inset-block-start: 7px;
+    inset-inline-end: 7px;
+    z-index: 2;
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  /* Keep interactive rails compact and above the fixed navigation. */
+  body #main .rw__grid { align-items: stretch; }
+  body #main .rw__card { height: 144px; min-height: 144px; overflow: hidden; }
+  body #main .rw__wheel { width: 126px; max-width: 48%; }
+  body #main .ba-sec__layout { grid-template-columns: 1.05fr .95fr; align-items: stretch; }
+  body #main .ba-sec__stage { min-width: 0; }
+  body #main .ba__frame { height: 185px; min-height: 185px; }
+  body #main .ba-sec__side { min-width: 0; }
+  body #main .ba-sec__tabs { gap: 6px; }
+  body #main .ba-sec__tab { padding: 7px; gap: 5px; }
+  body #main .ba-sec__tab-text strong { font-size: 9px; }
+  body #main .ba-sec__tab-text small { display: none; }
+  body #main .ba-sec__cta { display: none; }
+
+  body #main .hws { padding-block: 26px; }
+  body #main .hws__sub { font-size: 13px; }
+  body #main .hws__marker { margin-block-end: 8px; }
+  body #main .hws__num { width: 27px; height: 27px; font-size: 12px; }
+  body #main .hws__step:not(:last-child) .hws__marker::after { top: 13px; }
+
+  body #main .gb__card {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    align-items: center;
+    gap: 10px;
+    min-height: 176px;
+    padding: 16px;
+  }
+  body #main .gb__shield { grid-column: 1; grid-row: 1 / 4; width: 100%; }
+  body #main .gb__title,
+  body #main .gb__text,
+  body #main .gb__points { grid-column: 2; }
+  body #main .gb__points { gap: 5px; }
+  body #main .gb__point { padding: 4px; font-size: 9px; }
+
+  body #main .rv__summary { display: grid; grid-template-columns: repeat(3, 1fr); }
+  body #main .rv__summary-cell { min-width: 0; padding: 10px 5px; }
+  body #main .rv__score { font-size: 28px; }
+  body #main .rv__breakdown { display: none; }
+  body #main .rv__item .rc { min-height: 215px; }
+
+  body #main .blog__grid .bc__media { height: 95px; aspect-ratio: auto; }
+  body #main .blog__grid .bc__body { padding: 9px 7px; gap: 5px; }
+  body #main .blog__grid .bc__title { font-size: 11px; line-height: 1.45; }
+  body #main .blog__grid .bc__excerpt { display: none; }
+  body #main .blog__grid .bc__meta { font-size: 8px; }
+
+  body #main .cta__inner {
+    display: grid;
+    grid-template-columns: 1fr 38%;
+    gap: 10px;
+    align-items: center;
+  }
+  body #main .cta__copy { gap: 7px; }
+  body #main .cta__eyebrow,
+  body #main .cta__perks { display: none; }
+  body #main .cta__title { font-size: 20px; }
+  body #main .cta__text { font-size: 10px; }
+  body #main .cta__actions { gap: 5px; }
+  body #main .cta__actions .btn { min-height: 36px; padding: 5px 9px; font-size: 11px; }
+  body #main .cta__phone { display: none; }
+  body #main .cta__visual { display: block; }
+  body #main .cta__visual img { width: 100%; max-height: 112px; object-fit: contain; }
+
+  /* High-specificity mobile frame: component styles are scoped, therefore
+     the mobile art direction must explicitly win without using desktop rules. */
+  body #main .hero,
+  body #main .hero__inner { height: 452px; min-height: 452px; }
+  body #main .hero__copy {
+    position: absolute;
+    inset-inline-start: 4%;
+    inset-inline-end: auto;
+    inset-block-start: 138px;
+    width: 43%;
+    max-width: 43%;
+    margin: 0;
+    padding: 0;
+    gap: 12px;
+    align-items: flex-start;
+    text-align: start;
+  }
+  body #main .hero__title { font-size: clamp(1.75rem, 7.4vw, 2.25rem); line-height: 1.42; }
+  body #main .hero__title-mobile { align-items: flex-start; text-align: start; }
+  body #main .hero__title-mobile .hero__title-accent { white-space: nowrap; }
+  body #main .hero__checks { gap: 7px; font-size: 12px; }
+  body #main .hero__actions,
+  body #main .hero__actions > * { width: 100%; }
+
+  body #main .ql { margin-block-start: 0; padding: 10px 12px 0; }
+  body #main .ql__rail { padding: 11px 0; border-radius: 18px; }
+  body #main .ql__item { flex: 1 1 20%; }
+  body #main .ql__link { width: 100%; min-width: 0; padding-inline: 2px; }
+  body #main .ql__label { font-size: 10px; }
+
+  body #main .sh { gap: 7px; margin-block-end: 14px; }
+  body #main .sh__eyebrow { display: none; }
+  body #main .sh__title { font-size: 21px; }
+  body #main .sh__subtitle { font-size: 12px; line-height: 1.5; }
+  body #main .sh__action .btn { min-height: 36px; padding: 5px 12px; font-size: 11px; }
+
+  body #main .services__rail { margin-inline: -14px; padding-inline: 14px; gap: 10px; }
+  body #main .services__rail-item { width: min(31vw, 138px); }
+  body #main .services__rail-item .sc { min-height: 205px; height: 205px; border-radius: 14px; }
+  body #main .services__rail-item .sc__media { height: 105px; }
+  body #main .services__rail-item .sc__body { padding: 24px 8px 8px; }
+  body #main .services__rail-item .sc__summary { display: none; }
+  body #main .services__rail-item .sc__footer { display: none; }
+  body #main .services__controls { margin-block-start: 10px; }
+
+  /* Original interactive Doctol assistant, adapted to the new mobile rhythm. */
+  body #main #discovery { padding-block: 25px; }
+  body #main #discovery .disc__options {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+  body #main #discovery .disc__option {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-height: 82px;
+    padding: 8px 5px;
+    border-radius: 13px;
+    text-align: center;
+  }
+  body #main #discovery .disc__emoji { font-size: 20px; }
+  body #main #discovery .disc__label { flex: none; font-size: 9px; line-height: 1.35; }
+  body #main #discovery .disc__check {
+    position: absolute;
+    inset-block-start: 5px;
+    inset-inline-end: 5px;
+    width: 17px;
+    height: 17px;
+  }
+  body #main #discovery .disc__reco {
+    grid-template-columns: 32% 1fr;
+    gap: 8px;
+    margin-block-start: 12px;
+    padding: 9px;
+    border-radius: 14px;
+  }
+  body #main #discovery .disc__reco-img { height: 100px; aspect-ratio: auto; }
+  body #main #discovery .disc__reco-title { font-size: 14px; }
+  body #main #discovery .disc__reco-note { font-size: 9px; }
+  body #main #discovery .disc__reco-price strong { font-size: 17px; }
+  body #main #discovery .disc__reco-actions {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px;
+  }
+  body #main #discovery .disc__reco-actions .btn { min-height: 34px; font-size: 10px; }
+
+  body #main .ts { padding-block: 16px 25px; }
+  body #main .ts__grid { grid-template-columns: repeat(4, 1fr); gap: 7px; }
+  body #main .ts__card { min-height: 108px; padding: 9px 4px; border-radius: 13px; }
+  body #main .ts__icon { width: 36px; height: 36px; }
+  body #main .ts__title { font-size: 10px; }
+  body #main .ts__text { font-size: 8px; }
+
+  body #main .offers__rail { margin-inline: -14px; padding-inline: 14px; }
+  body #main .offers__item { width: min(88vw, 390px); }
+  body #main .offers__item .oc { height: 168px; min-height: 168px; }
+  body #main .offers__item .oc__body { gap: 5px; padding: 10px 9px; }
+  body #main .offers__item .oc__title { font-size: 14px; }
+  body #main .offers__item .oc__subtitle { font-size: 9px; }
+  body #main .offers__item .oc__highlights { display: none; }
+  body #main .offers__item .oc__body > .btn { min-height: 32px; font-size: 10px; }
+
+  body #main .packages__grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    margin-inline: -14px;
+    padding-inline: 14px;
+  }
+  body #main .packages__grid > li { flex: 0 0 min(88vw, 390px); }
+  body #main .packages__grid .pc {
+    grid-template-columns: 42% 1fr;
+    min-height: 178px;
+    height: 178px;
+    padding: 9px;
+  }
+  body #main .packages__grid .pc__media {
+    grid-column: 2;
+    min-height: 158px;
+  }
+  body #main .packages__grid .pc__head,
+  body #main .packages__grid .pc__pricing,
+  body #main .packages__grid .pc__items,
+  body #main .packages__grid .pc__details,
+  body #main .packages__grid .pc__cta { grid-column: 1; }
+  body #main .packages__grid .pc__media img { object-position: center; }
+  body #main .packages__grid .pc__items { overflow: hidden; }
+  body #main .packages__grid .pc__items li:nth-child(n + 4) { display: none; }
+  body #main .packages__grid .pc__cta { min-height: 30px; }
+
+  body #main .rw__grid { grid-template-columns: 1.6fr 1fr; gap: 8px; }
+  body #main .rw__card { height: 145px; min-height: 145px; padding: 10px; }
+  body #main .rw__title { font-size: 13px; }
+  body #main .rw__text { font-size: 8px; }
+  body #main .rw__cta { min-height: 29px; padding: 4px 9px; font-size: 9px; }
+  body #main .rw__wheel {
+    width: 118px;
+    height: 118px;
+    max-width: 49%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  body #main .rw__card--rewards { grid-column: 1; }
+  body #main .rw__card--share { grid-column: 2; }
+  body #main .rw__avatar { width: 38px; height: 38px; }
+  body #main .rw__win { inset: 8px; padding: 8px; font-size: 10px; }
+
+  body #main .ba-sec__layout { grid-template-columns: 1.1fr .9fr; gap: 8px; }
+  body #main .ba__frame { height: 112px; min-height: 112px; }
+  body #main .ba-sec__tab { min-height: 32px; padding: 5px; }
+  body #main .ba-sec__mobile-grid { gap: 10px; }
+  body #main .ba-sec__mobile-card { border-radius: 13px; }
+  body #main .ba-sec__mobile-card .ba__frame {
+    height: 116px;
+    min-height: 116px;
+    border-radius: 13px;
+  }
+  body #main .ba-sec__mobile-card .ba__tag {
+    inset-block-start: 7px;
+    padding: 3px 7px;
+    font-size: 8px;
+  }
+  body #main .ba-sec__mobile-card .ba__handle { width: 34px; height: 34px; }
+
+  /* Video album keeps its filters and modal, but uses compact swipe cards. */
+  body #main #videos { padding-block: 25px; }
+  body #main #videos .vg__filters {
+    gap: 6px;
+    margin-block-end: 12px;
+  }
+  body #main #videos .vg__filter {
+    min-height: 32px;
+    padding: 4px 10px;
+    font-size: 9px;
+  }
+  body #main #videos .vg__notice {
+    margin-block-end: 11px;
+    padding: 7px 9px;
+    font-size: 8px;
+  }
+  body #main #videos .vg__grid { gap: 10px; }
+  body #main #videos .vg__grid > li { width: min(63vw, 255px); }
+  body #main #videos .vc { min-height: 210px; border-radius: 14px; }
+  body #main #videos .vc__media { height: 128px; aspect-ratio: auto; }
+  body #main #videos .vc__play { width: 40px; height: 40px; }
+  body #main #videos .vc__body { gap: 4px; padding: 9px; }
+  body #main #videos .vc__title { font-size: 11px; }
+  body #main #videos .vc__quote,
+  body #main #videos .vc__meta { font-size: 8px; }
+
+  /* These two restored sections keep their original identity and layout. */
+  body #main #discovery .sh__eyebrow,
+  body #main #videos .sh__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    font-size: 11px;
+  }
+  body #main #discovery .disc__options {
+    grid-template-columns: 1fr;
+    gap: var(--dt-space-3);
+  }
+  body #main #discovery .disc__option {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--dt-space-3);
+    min-height: 76px;
+    padding: var(--dt-space-4);
+    border-radius: var(--dt-radius-lg);
+    text-align: start;
+  }
+  body #main #discovery .disc__emoji { font-size: 1.6rem; }
+  body #main #discovery .disc__label {
+    flex: 1;
+    font-size: var(--dt-fs-base);
+    line-height: normal;
+  }
+  body #main #discovery .disc__check {
+    position: static;
+    width: 24px;
+    height: 24px;
+  }
+  body #main #discovery .disc__reco {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--dt-space-5);
+    margin-block-start: var(--dt-space-8);
+    padding: var(--dt-space-4);
+    border-radius: var(--dt-radius-xl);
+  }
+  body #main #discovery .disc__reco-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+  body #main #discovery .disc__reco-title { font-size: var(--dt-fs-h3); }
+  body #main #discovery .disc__reco-note { font-size: var(--dt-fs-sm); }
+  body #main #discovery .disc__reco-price strong { font-size: 1.5rem; }
+  body #main #discovery .disc__reco-actions {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-space-2);
+  }
+  body #main #discovery .disc__reco-actions .btn {
+    min-height: initial;
+    font-size: var(--dt-fs-sm);
+  }
+
+  body #main .hws__steps { grid-template-columns: repeat(4, 1fr); gap: 3px; }
+  body #main .hws__tile { width: 58px; height: 58px; }
+  body #main .hws__step-title { font-size: 10px; }
+  body #main .hws__step-text { font-size: 8px; }
+
+  body #main .blog__grid > li { flex: 0 0 min(30vw, 135px); }
+  body #main #tips { padding-block: 24px; }
+  body #main #tips .sh { display: grid; grid-template-columns: 1fr auto; align-items: end; }
+  body #main #tips .sh__action { grid-column: 2; grid-row: 1; }
+  body #main #tips .blog__grid { gap: 9px; }
+  body #main #tips .bc { height: 185px; min-height: 185px; }
+  body #main .faq__list { gap: 6px; }
+  body #main .faq__trigger { min-height: 47px; padding: 7px 9px; }
+  body #main .faq__question { font-size: 10px; }
+
+  /* Closing booking card: light horizontal composition from the mobile art. */
+  body #main .cta {
+    margin: 0 14px 18px;
+    padding: 0;
+    border-radius: 16px;
+    background: #f1f7f7;
+    color: var(--dt-navy-700);
+  }
+  body #main .cta__bg { display: none; }
+  body #main .cta__inner {
+    min-height: 145px;
+    padding: 14px;
+    grid-template-columns: 1fr 38%;
+    gap: 10px;
+  }
+  body #main .cta__copy { grid-column: 1; grid-row: 1; gap: 7px; }
+  body #main .cta__visual { grid-column: 2; grid-row: 1; }
+  body #main .cta__title { color: var(--dt-navy-700); font-size: 20px; }
+  body #main .cta__text { color: var(--dt-ink-soft); font-size: 10px; line-height: 1.55; }
+  body #main .cta__actions { width: 100%; margin: 0; }
+  body #main .cta__actions .btn {
+    width: 100%;
+    min-height: 36px;
+    border: 0;
+    background: var(--dt-grad-primary);
+    color: #fff;
+    box-shadow: none;
+  }
+  body #main .cta__visual img {
+    width: 100%;
+    height: 116px;
+    max-height: 116px;
+    border: 0;
+    border-radius: 0;
+    object-fit: contain;
+    box-shadow: none;
+  }
+  body #main .cta__badge { width: 52px; height: 52px; inset: auto 0 0 auto; border-width: 3px; }
+  body #main .cta__badge-value { font-size: 16px; }
+  body #main .cta__badge-label { font-size: 7px; }
+
+  body #main .footer {
+    padding-block: 20px calc(var(--dt-mobilenav-h) + 18px);
+    border-radius: 26px 26px 0 0;
+    background: linear-gradient(135deg, #009fa3 0%, #00898e 100%);
+  }
+  body #main .footer__top {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px 7px;
+    padding-block-end: 16px;
+  }
+  body #main .footer__brand {
+    grid-column: 1 / -1;
+    align-items: center;
+    gap: 7px;
+    text-align: center;
+  }
+  body #main .footer__tagline { font-size: 10px; }
+  body #main .footer__social { gap: 5px; }
+  body #main .footer__social a { width: 29px; height: 29px; }
+  body #main .footer__column { min-width: 0; text-align: center; }
+  body #main .footer__column-title { margin-block-end: 8px; font-size: 10px; }
+  body #main .footer__column ul { gap: 5px; }
+  body #main .footer__column a,
+  body #main .footer__hours {
+    justify-content: center;
+    gap: 3px;
+    font-size: 7.5px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  body #main .footer__bottom {
+    justify-content: center;
+    gap: 4px 10px;
+    padding-block-start: 10px;
+    font-size: 8px;
+    text-align: center;
+  }
+  body #main .pm { gap: 8px; padding-block: 12px; }
+  body #main .pm__title { font-size: 9px; }
+  body #main .pm__list {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 3px;
+    padding: 7px 4px;
+    border-radius: 10px;
+    background: #fff;
+  }
+  body #main .pm__item {
+    min-width: 0;
+    padding: 2px 3px;
+    background: transparent;
+    box-shadow: none;
+  }
+  body #main .pm__note { font-size: 8px; }
+  body #main .mnav { border-radius: 26px 26px 0 0; }
+}

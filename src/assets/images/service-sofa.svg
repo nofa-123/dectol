@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="ser-wall" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F6F1E9"/>
+      <stop offset="1" stop-color="#EBE3D8"/>
+    </linearGradient>
+    <linearGradient id="ser-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCCFC0"/>
+      <stop offset="1" stop-color="#C6B7A6"/>
+    </linearGradient>
+    <linearGradient id="ser-sofa" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#EFE6DA"/>
+      <stop offset="1" stop-color="#DDD0BF"/>
+    </linearGradient>
+    <linearGradient id="ser-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#009FA3"/>
+      <stop offset="1" stop-color="#007377"/>
+    </linearGradient>
+    <linearGradient id="ser-glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#DFF3F7"/>
+      <stop offset="0.55" stop-color="#BFE4EC"/>
+      <stop offset="1" stop-color="#9FD2DE"/>
+    </linearGradient>
+    <linearGradient id="ser-beam" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ser-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ser-shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#073B4C" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#073B4C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ser-soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="ser-grime" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="mono"
+        values="0 0 0 0 0.32  0 0 0 0 0.27  0 0 0 0 0.18  0 0 0 0.55 0"/>
+      <feComposite in="mono" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#ser-wall)"/>
+  <rect y="430" width="800" height="170" fill="url(#ser-floor)"/>
+  <rect y="416" width="800" height="14" fill="#FFFFFF" opacity="0.75"/>
+  <rect y="416" width="800" height="3" fill="#073B4C" opacity="0.06"/>
+  <ellipse cx="400" cy="430" rx="480" ry="96" fill="url(#ser-glow)" opacity="0.5"/>
+  <g>
+    <rect x="530" y="60" width="230" height="250" rx="14" fill="#FFFFFF" opacity="0.9"/>
+    <rect x="540" y="70" width="210" height="230" rx="8" fill="url(#ser-glass)"/>
+    <rect x="642" y="70" width="6" height="230" fill="#FFFFFF" opacity="0.85"/>
+    <rect x="540" y="166.6" width="210" height="6" fill="#FFFFFF" opacity="0.85"/>
+    <path d="M548 292 L655.5 80 L703.8 80 L562 292 Z"
+      fill="#FFFFFF" opacity="0.35"/>
+    <!-- distant skyline -->
+    <g opacity="0.28" fill="#073B4C">
+      <rect x="552" y="196.5" width="27.3" height="103.5" rx="3"/>
+      <rect x="594.6" y="171.2" width="21" height="128.8" rx="3"/>
+      <rect x="670.2" y="212.6" width="33.6" height="87.4" rx="3"/>
+    </g>
+    <path d="M540 300 L750 116 L939 622 L498 622 Z"
+             fill="url(#ser-beam)" opacity="0.5"/>
+  </g>
+      
+  <g>
+    <path d="M120 622.6 L176 387.4 L624 387.4 L680 622.6 Z"
+      fill="#F2EBE0"/>
+    <path d="M153.6 589.672 L204 420.328 L596 420.328 L646.4 589.672 Z"
+      fill="none" stroke="#009FA3" stroke-width="3" opacity="0.55"/>
+    <g fill="#009FA3" opacity="0.35">
+      <ellipse cx="400" cy="505" rx="95.2" ry="56.44799999999999"/>
+      <ellipse cx="400" cy="505" rx="50.4" ry="30.576" fill="#F2EBE0"/>
+      <ellipse cx="243.2" cy="505" rx="28" ry="21.168"/>
+      <ellipse cx="556.8" cy="505" rx="28" ry="21.168"/>
+    </g>
+    
+    
+  </g>
+  <g>
+    <ellipse cx="375" cy="467" rx="208" ry="33.28" fill="url(#ser-shadow)"/>
+    <!-- back -->
+    <rect x="175" y="245" width="400" height="128.96" rx="45.76" fill="url(#ser-sofa)"/>
+    <!-- arms -->
+    <rect x="157" y="303.24" width="60" height="124.8" rx="41.6" fill="url(#ser-sofa)"/>
+    <rect x="533" y="303.24" width="60" height="124.8" rx="41.6" fill="url(#ser-sofa)"/>
+    <!-- seat cushions -->
+    <g>
+      <rect x="211" y="349" width="108" height="70.72" rx="24.96" fill="url(#ser-sofa)"/>
+      <rect x="323" y="349" width="108" height="70.72" rx="24.96" fill="url(#ser-sofa)"/>
+      <rect x="435" y="349" width="108" height="70.72" rx="24.96" fill="url(#ser-sofa)"/>
+    </g>
+    <!-- back seams -->
+    <g stroke="#C9B9A5" stroke-width="2" opacity="0.55" fill="none">
+      <path d="M309 261.64 V349"/>
+      <path d="M441 261.64 V349"/>
+    </g>
+    <!-- accent cushions -->
+    <g transform="rotate(-8 247 315.72)">
+      <rect x="215" y="278.28" width="68" height="68" rx="12"
+        fill="#009FA3" opacity="0.92"/>
+    </g>
+    <g transform="rotate(9 503 315.72)">
+      <rect x="467" y="278.28" width="68" height="68" rx="12"
+        fill="#F5C542" opacity="0.85"/>
+    </g>
+    
+    <!-- legs -->
+    <rect x="199" y="423.88" width="14.000000000000002" height="37.44" rx="3" fill="#8A6739"/>
+    <rect x="535" y="423.88" width="14.000000000000002" height="37.44" rx="3" fill="#8A6739"/>
+    
+    <path d="M205.97 238.23 Q205.97 253.58 221.33 253.58 Q205.97 253.58 205.97 268.94 Q205.97 253.58 190.62 253.58 Q205.97 253.58 205.97 238.23 Z"
+      fill="#F5C542" opacity="0.85"/><path d="M524.38 260.16 Q524.38 268.46 532.68 268.46 Q524.38 268.46 524.38 276.76 Q524.38 268.46 516.08 268.46 Q524.38 268.46 524.38 260.16 Z"
+      fill="#F5C542" opacity="0.8"/><path d="M455.87 309.14 Q455.87 318.03 464.75 318.03 Q455.87 318.03 455.87 326.91 Q455.87 318.03 446.99 318.03 Q455.87 318.03 455.87 309.14 Z"
+      fill="#F5C542" opacity="0.7"/><path d="M237.81 253.63 Q237.81 263.39 247.57 263.39 Q237.81 263.39 237.81 273.15 Q237.81 263.39 228.06 263.39 Q237.81 263.39 237.81 253.63 Z"
+      fill="#F5C542" opacity="0.86"/><path d="M220.48 301.33 Q220.48 310.27 229.42 310.27 Q220.48 310.27 220.48 319.21 Q220.48 310.27 211.54 310.27 Q220.48 310.27 220.48 301.33 Z"
+      fill="#F5C542" opacity="0.59"/>
+  </g>
+      
+  <g>
+    <ellipse cx="740" cy="451" rx="28.9" ry="7.6499999999999995" fill="url(#ser-shadow)"/>
+    <ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(-80 740 400.8)"/><ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#2F8F6B" opacity="0.92"
+      transform="rotate(-54 740 400.8)"/><ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(-28 740 400.8)"/><ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#2F8F6B" opacity="0.92"
+      transform="rotate(-2 740 400.8)"/><ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(24 740 400.8)"/><ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#2F8F6B" opacity="0.92"
+      transform="rotate(50 740 400.8)"/><ellipse cx="740" cy="363.4" rx="12.75" ry="39.1"
+      fill="#1F6B4F" opacity="0.92"
+      transform="rotate(76 740 400.8)"/>
+    <path d="M717.9 405.9 h 44.199999999999996 l -5.95 39.1 h -32.3 Z" fill="#EBE3D8"/>
+    <path d="M717.9 405.9 h 44.199999999999996 l -2.55 10.2 h -39.1 Z" fill="#C6B7A6" opacity="0.6"/>
+  </g><path d="M173.23 195.48 Q173.23 210.84 188.59 210.84 Q173.23 210.84 173.23 226.19 Q173.23 210.84 157.87 210.84 Q173.23 210.84 173.23 195.48 Z"
+      fill="#F5C542" opacity="0.85"/><path d="M412.04 213.7 Q412.04 222 420.34 222 Q412.04 222 412.04 230.3 Q412.04 222 403.74 222 Q412.04 222 412.04 213.7 Z"
+      fill="#F5C542" opacity="0.8"/><path d="M360.65 250.29 Q360.65 259.17 369.54 259.17 Q360.65 259.17 360.65 268.05 Q360.65 259.17 351.77 259.17 Q360.65 259.17 360.65 250.29 Z"
+      fill="#F5C542" opacity="0.7"/><path d="M197.11 208.43 Q197.11 218.19 206.87 218.19 Q197.11 218.19 197.11 227.95 Q197.11 218.19 187.35 218.19 Q197.11 218.19 197.11 208.43 Z"
+      fill="#F5C542" opacity="0.86"/><path d="M184.11 244.41 Q184.11 253.35 193.05 253.35 Q184.11 253.35 184.11 262.29 Q184.11 253.35 175.17 253.35 Q184.11 253.35 184.11 244.41 Z"
+      fill="#F5C542" opacity="0.59"/></svg>

@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Read(//usr/local/bin/**)",
+      "Read(//Users/user/.nvm/versions/**)",
+      "Read(//usr/local/**)",
+      "Bash(curl -sSI --max-time 12 https://nodejs.org/dist/v22.14.0/node-v22.14.0-darwin-x64.tar.gz)",
+      "Bash(curl -sSL --max-time 600 -o node.tar.gz https://nodejs.org/dist/v22.14.0/node-v22.14.0-darwin-x64.tar.gz)",
+      "Bash(tar xzf *)",
+      "Bash(mv node-v22.14.0-darwin-x64 nodejs)",
+      "Bash(./nodejs/bin/node --version)",
+      "Bash(./nodejs/bin/npm --version)",
+      "WebFetch(domain:doctol.com.sa)"
+    ]
+  }
+}

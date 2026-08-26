@@ -1,0 +1,23 @@
+{
+  "name": "doctol-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DOCTOL — Saudi home cleaning services marketplace. Vue 3 + Vite frontend.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gen:assets": "node tools/gen-assets.mjs"
+  },
+  "dependencies": {
+    "motion": "^13.0.0",
+    "pinia": "^4.0.2",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "^8.2.1"
+  }
+}

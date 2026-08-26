@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" width="320" height="400" role="img">
+  <defs>
+    <linearGradient id="cat-wall" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F6F1E9"/>
+      <stop offset="1" stop-color="#EBE3D8"/>
+    </linearGradient>
+    <linearGradient id="cat-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCCFC0"/>
+      <stop offset="1" stop-color="#C6B7A6"/>
+    </linearGradient>
+    <linearGradient id="cat-sofa" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#EFE6DA"/>
+      <stop offset="1" stop-color="#DDD0BF"/>
+    </linearGradient>
+    <linearGradient id="cat-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#009FA3"/>
+      <stop offset="1" stop-color="#007377"/>
+    </linearGradient>
+    <linearGradient id="cat-glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#DFF3F7"/>
+      <stop offset="0.55" stop-color="#BFE4EC"/>
+      <stop offset="1" stop-color="#9FD2DE"/>
+    </linearGradient>
+    <linearGradient id="cat-beam" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="cat-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cat-shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#073B4C" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#073B4C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cat-soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="cat-grime" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="mono"
+        values="0 0 0 0 0.32  0 0 0 0 0.27  0 0 0 0 0.18  0 0 0 0.55 0"/>
+      <feComposite in="mono" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="320" height="400" fill="#1B242A"/>
+  <rect y="220.00000000000003" width="320" height="180" fill="#2B383F"/>
+  <path d="M0 220.00000000000003 Q 160 152 320 220.00000000000003 L320 248 Q 160 184 0 248 Z" fill="#3A4A52"/>
+  <!-- windscreen -->
+  <path d="M25.6 168 Q 160 64 294.40000000000003 168 L294.40000000000003 200 Q 160 104 25.6 200 Z"
+    fill="url(#cat-glass)" opacity="0.55"/>
+  <!-- seat -->
+  <g>
+    <path d="M57.599999999999994 400
+             L64 264
+             q 6.4 -32 44.800000000000004 -32
+             l 96 0
+             q 38.4 0 44.800000000000004 32
+             L275.2 400 Z" fill="#43535B"/>
+    <path d="M89.60000000000001 296 h 140.8" stroke="#5B6C75" stroke-width="3"/>
+    <path d="M89.60000000000001 344 h 140.8" stroke="#5B6C75" stroke-width="3"/>
+    
+  </g>
+  <!-- steering wheel -->
+  <g opacity="0.9">
+    <circle cx="160" cy="224.00000000000003" r="51.2" fill="none" stroke="#0F171B" stroke-width="14.399999999999999"/>
+    <path d="M160 224.00000000000003 h 48 M160 224.00000000000003 l -35.2 24 M160 224.00000000000003 l -35.2 -24"
+      stroke="#0F171B" stroke-width="11.200000000000001"/>
+  </g>
+  <path d="M62.64 177.61 Q62.64 192.96 78 192.96 Q62.64 192.96 62.64 208.32 Q62.64 192.96 47.28 192.96 Q62.64 192.96 62.64 177.61 Z"
+      fill="#F5C542" opacity="0.85"/><path d="M246.04 193.23 Q246.04 201.53 254.34 201.53 Q246.04 201.53 246.04 209.83 Q246.04 201.53 237.74 201.53 Q246.04 201.53 246.04 193.23 Z"
+      fill="#F5C542" opacity="0.8"/><path d="M206.58 221.2 Q206.58 230.08 215.46 230.08 Q206.58 230.08 206.58 238.97 Q206.58 230.08 197.7 230.08 Q206.58 230.08 206.58 221.2 Z"
+      fill="#F5C542" opacity="0.7"/><path d="M80.98 188.85 Q80.98 198.61 90.74 198.61 Q80.98 198.61 80.98 208.37 Q80.98 198.61 71.22 198.61 Q80.98 198.61 80.98 188.85 Z"
+      fill="#F5C542" opacity="0.86"/><path d="M71 216.67 Q71 225.61 79.94 225.61 Q71 225.61 71 234.55 Q71 225.61 62.06 225.61 Q71 225.61 71 216.67 Z"
+      fill="#F5C542" opacity="0.59"/><path d="M262.25 144.81 Q262.25 152.48 269.92 152.48 Q262.25 152.48 262.25 160.14 Q262.25 152.48 254.58 152.48 Q262.25 152.48 262.25 144.81 Z"
+      fill="#F5C542" opacity="0.87"/></svg>

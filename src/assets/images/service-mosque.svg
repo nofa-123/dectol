@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="ser-wall" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F6F1E9"/>
+      <stop offset="1" stop-color="#EBE3D8"/>
+    </linearGradient>
+    <linearGradient id="ser-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCCFC0"/>
+      <stop offset="1" stop-color="#C6B7A6"/>
+    </linearGradient>
+    <linearGradient id="ser-sofa" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#EFE6DA"/>
+      <stop offset="1" stop-color="#DDD0BF"/>
+    </linearGradient>
+    <linearGradient id="ser-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#009FA3"/>
+      <stop offset="1" stop-color="#007377"/>
+    </linearGradient>
+    <linearGradient id="ser-glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#DFF3F7"/>
+      <stop offset="0.55" stop-color="#BFE4EC"/>
+      <stop offset="1" stop-color="#9FD2DE"/>
+    </linearGradient>
+    <linearGradient id="ser-beam" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="ser-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ser-shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#073B4C" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#073B4C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="ser-soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="ser-grime" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="mono"
+        values="0 0 0 0 0.32  0 0 0 0 0.27  0 0 0 0 0.18  0 0 0 0.55 0"/>
+      <feComposite in="mono" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#ser-wall)"/>
+  <!-- mihrab -->
+  <path d="M288 372 V180 a 112.00000000000001 112.00000000000001 0 0 1 224.00000000000003 0 V372 Z"
+    fill="#009FA3" opacity="0.14"/>
+  <path d="M320 372 V192 a 80 80 0 0 1 160 0 V372 Z"
+    fill="#007377" opacity="0.2"/>
+  <path d="M352 372 V210 a 48 48 0 0 1 96 0 V372 Z"
+    fill="#F5C542" opacity="0.35"/>
+  <!-- columns -->
+  <g fill="#FFFFFF" opacity="0.85">
+    <rect x="80" y="144" width="44" height="228" rx="6"/>
+    <rect x="676" y="144" width="44" height="228" rx="6"/>
+  </g>
+  <g fill="#F5C542" opacity="0.5">
+    <circle cx="101.6" cy="144" r="28.000000000000004"/>
+    <circle cx="697.6" cy="144" r="28.000000000000004"/>
+  </g>
+  <!-- chandelier -->
+  <path d="M400 0 V72" stroke="#8A6739" stroke-width="3"/>
+  <circle cx="400" cy="96" r="36" fill="#F5C542" opacity="0.75"/>
+  <rect y="364" width="800" height="8" fill="#FFFFFF" opacity="0.7"/>
+  <rect x="32" y="372" width="736" height="42.6"
+      fill="#1F7A5A" opacity="0.92"/><rect x="25.6" y="417.6" width="748.8" height="42.6"
+      fill="#186349" opacity="0.92"/><rect x="19.2" y="463.2" width="761.6" height="42.6"
+      fill="#1F7A5A" opacity="0.92"/><rect x="12.8" y="508.8" width="774.4" height="42.6"
+      fill="#186349" opacity="0.92"/><rect x="6.4" y="554.4" width="787.2" height="42.6"
+      fill="#1F7A5A" opacity="0.92"/>
+  
+  <path d="M163.36 417.54 Q163.36 432.89 178.72 432.89 Q163.36 432.89 163.36 448.25 Q163.36 432.89 148.01 432.89 Q163.36 432.89 163.36 417.54 Z"
+      fill="#F5C542" opacity="0.85"/><path d="M609.14 445.43 Q609.14 453.73 617.44 453.73 Q609.14 453.73 609.14 462.03 Q609.14 453.73 600.84 453.73 Q609.14 453.73 609.14 445.43 Z"
+      fill="#F5C542" opacity="0.8"/><path d="M513.22 514.23 Q513.22 523.12 522.1 523.12 Q513.22 523.12 513.22 532 Q513.22 523.12 504.34 523.12 Q513.22 523.12 513.22 514.23 Z"
+      fill="#F5C542" opacity="0.7"/><path d="M207.94 436.86 Q207.94 446.62 217.7 446.62 Q207.94 446.62 207.94 456.38 Q207.94 446.62 198.18 446.62 Q207.94 446.62 207.94 436.86 Z"
+      fill="#F5C542" opacity="0.86"/><path d="M183.68 503.31 Q183.68 512.25 192.62 512.25 Q183.68 512.25 183.68 521.2 Q183.68 512.25 174.74 512.25 Q183.68 512.25 183.68 503.31 Z"
+      fill="#F5C542" opacity="0.59"/><path d="M648.53 326.82 Q648.53 334.49 656.19 334.49 Q648.53 334.49 648.53 342.16 Q648.53 334.49 640.86 334.49 Q648.53 334.49 648.53 326.82 Z"
+      fill="#F5C542" opacity="0.87"/></svg>

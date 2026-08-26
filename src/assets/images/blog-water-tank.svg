@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480" role="img">
+  <defs>
+    <linearGradient id="blo-wall" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#F6F1E9"/>
+      <stop offset="1" stop-color="#EBE3D8"/>
+    </linearGradient>
+    <linearGradient id="blo-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCCFC0"/>
+      <stop offset="1" stop-color="#C6B7A6"/>
+    </linearGradient>
+    <linearGradient id="blo-sofa" x1="0" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="0.45" stop-color="#EFE6DA"/>
+      <stop offset="1" stop-color="#DDD0BF"/>
+    </linearGradient>
+    <linearGradient id="blo-teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#009FA3"/>
+      <stop offset="1" stop-color="#007377"/>
+    </linearGradient>
+    <linearGradient id="blo-glass" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#DFF3F7"/>
+      <stop offset="0.55" stop-color="#BFE4EC"/>
+      <stop offset="1" stop-color="#9FD2DE"/>
+    </linearGradient>
+    <linearGradient id="blo-beam" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="blo-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFF1CE" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#FFF1CE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blo-shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#073B4C" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#073B4C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blo-soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="blo-grime" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" result="mono"
+        values="0 0 0 0 0.32  0 0 0 0 0.27  0 0 0 0 0.18  0 0 0 0.55 0"/>
+      <feComposite in="mono" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  
+  <rect width="720" height="480" fill="url(#blo-wall)"/>
+  <rect y="374.40000000000003" width="720" height="105.59999999999997" fill="url(#blo-floor)"/>
+  <rect y="360.40000000000003" width="720" height="14" fill="#FFFFFF" opacity="0.75"/>
+  <rect y="360.40000000000003" width="720" height="3" fill="#073B4C" opacity="0.06"/>
+  <ellipse cx="360" cy="374.40000000000003" rx="432" ry="76.8" fill="url(#blo-glow)" opacity="0.5"/>
+  <g>
+    <rect x="144" y="96" width="432" height="268.8" rx="18" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="165.6" y="115.19999999999999" width="388.8" height="230.39999999999998" rx="12" fill="#E7EFF1"/>
+    <path d="M165.6 211.2 h 388.8 v 134.4 a 12 12 0 0 1 -12 12 h 364.8 a 12 12 0 0 1 -12 -12 Z"
+      fill="#57C2D8"/>
+    <path d="M165.6 211.2 q 97.2 -14.399999999999999 194.4 0 t 194.4 0 v 24 h -388.8 Z"
+      fill="#2E9CB8" opacity="0.55"/>
+    
+    <rect x="302.4" y="67.2" width="115.2" height="33.6" rx="6" fill="#EBE3D8"/>
+    <rect x="324" y="48" width="72" height="24" rx="4" fill="#C6B7A6"/>
+    <path d="M576 163.20000000000002 h 72" stroke="#073B4C" stroke-width="15.84" stroke-linecap="round" opacity="0.7"/>
+    <path d="M144 297.6 h -72" stroke="#073B4C" stroke-width="15.84" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <path d="M213.96 214.09 Q213.96 229.44 229.32 229.44 Q213.96 229.44 213.96 244.8 Q213.96 229.44 198.61 229.44 Q213.96 229.44 213.96 214.09 Z"
+      fill="#FFFFFF" opacity="0.85"/><path d="M489.07 234 Q489.07 242.3 497.37 242.3 Q489.07 242.3 489.07 250.6 Q489.07 242.3 480.77 242.3 Q489.07 242.3 489.07 234 Z"
+      fill="#FFFFFF" opacity="0.8"/><path d="M429.87 276.24 Q429.87 285.12 438.76 285.12 Q429.87 285.12 429.87 294.01 Q429.87 285.12 420.99 285.12 Q429.87 285.12 429.87 276.24 Z"
+      fill="#FFFFFF" opacity="0.7"/><path d="M241.47 228.16 Q241.47 237.92 251.23 237.92 Q241.47 237.92 241.47 247.67 Q241.47 237.92 231.71 237.92 Q241.47 237.92 241.47 228.16 Z"
+      fill="#FFFFFF" opacity="0.86"/><path d="M226.5 269.48 Q226.5 278.42 235.44 278.42 Q226.5 278.42 226.5 287.36 Q226.5 278.42 217.56 278.42 Q226.5 278.42 226.5 269.48 Z"
+      fill="#FFFFFF" opacity="0.59"/><path d="M513.38 161.04 Q513.38 168.71 521.04 168.71 Q513.38 168.71 513.38 176.38 Q513.38 168.71 505.71 168.71 Q513.38 168.71 513.38 161.04 Z"
+      fill="#FFFFFF" opacity="0.87"/></svg>

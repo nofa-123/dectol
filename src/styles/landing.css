@@ -1,0 +1,117 @@
+/**
+ * Service-landing accent variants.
+ *
+ * Every landing shares one design system but needs its own character — the
+ * brief asked for pages that don't look like copies of each other. Rather than
+ * seven stylesheets, each page sets one accent class on its root and the
+ * section components read these variables. Teal stays the brand anchor
+ * everywhere; the accent shifts hue, hero wash and pattern.
+ */
+
+.sl {
+  --sl-accent: var(--dt-teal-500);
+  --sl-accent-deep: var(--dt-teal-700);
+  --sl-accent-soft: var(--dt-teal-50);
+  --sl-accent-line: var(--dt-teal-100);
+  --sl-on-accent: #ffffff;
+  --sl-hero: linear-gradient(160deg, #f1faf9 0%, #ffffff 55%, #f7fbfb 100%);
+  --sl-hero-orb: rgb(0 159 163 / 0.24);
+  --sl-band: var(--dt-grad-deep);
+  --sl-pattern-size: 64px;
+  --sl-pattern-color: rgb(7 59 76 / 0.035);
+}
+
+/* التأهيلية — transformation, structural, navy-led */
+.sl--rehab {
+  --sl-accent: #0d5468;
+  --sl-accent-deep: #073b4c;
+  --sl-accent-soft: #eef4f6;
+  --sl-accent-line: #d5e4e9;
+  --sl-hero: linear-gradient(155deg, #eef4f6 0%, #ffffff 50%, #f4f8f9 100%);
+  --sl-hero-orb: rgb(13 84 104 / 0.22);
+  --sl-pattern-size: 40px;
+}
+
+/* الأثاث — warm, soft, tactile */
+.sl--furniture {
+  --sl-accent: #009fa3;
+  --sl-accent-deep: #007377;
+  --sl-accent-soft: #fbf6ef;
+  --sl-accent-line: #ecdfcd;
+  --sl-hero: linear-gradient(155deg, #fbf5ed 0%, #ffffff 52%, #f2faf9 100%);
+  --sl-hero-orb: rgb(245 197 66 / 0.22);
+  --sl-pattern-size: 88px;
+  --sl-pattern-color: rgb(176 135 87 / 0.06);
+}
+
+/* المسابح والخزانات — cool, aquatic, calm */
+.sl--water {
+  --sl-accent: #1f9fc4;
+  --sl-accent-deep: #0f6f8e;
+  --sl-accent-soft: #eef8fb;
+  --sl-accent-line: #cfe9f2;
+  --sl-hero: linear-gradient(155deg, #e9f6fb 0%, #ffffff 55%, #f0fbfd 100%);
+  --sl-hero-orb: rgb(31 159 196 / 0.28);
+  --sl-band: linear-gradient(140deg, #0f6f8e 0%, #0b4f66 55%, #073b4c 100%);
+  --sl-pattern-size: 56px;
+  --sl-pattern-color: rgb(31 159 196 / 0.07);
+}
+
+/* المساجد — dignified, gold-touched, quiet */
+.sl--mosque {
+  --sl-accent: #1f7a5a;
+  --sl-accent-deep: #145340;
+  --sl-accent-soft: #f2f8f4;
+  --sl-accent-line: #d8ebe1;
+  --sl-hero: linear-gradient(155deg, #f6f3ea 0%, #ffffff 52%, #f1f8f4 100%);
+  --sl-hero-orb: rgb(245 197 66 / 0.2);
+  --sl-band: linear-gradient(140deg, #145340 0%, #0e3b2e 60%, #08251d 100%);
+  --sl-pattern-size: 32px;
+  --sl-pattern-color: rgb(31 122 90 / 0.07);
+}
+
+/* السيارات — dark, dynamic, high-contrast */
+.sl--car {
+  --sl-accent: #00a79d;
+  --sl-accent-deep: #04575a;
+  --sl-accent-soft: #eef3f4;
+  --sl-accent-line: #d3e0e2;
+  --sl-hero: linear-gradient(150deg, #eceff1 0%, #ffffff 48%, #eef7f7 100%);
+  --sl-hero-orb: rgb(27 36 42 / 0.2);
+  --sl-band: linear-gradient(140deg, #1b242a 0%, #04575a 70%, #00a79d 140%);
+  --sl-pattern-size: 24px;
+  --sl-pattern-color: rgb(27 36 42 / 0.06);
+}
+
+/* المكاتب والمحلات — corporate, structured, slate */
+.sl--corporate {
+  --sl-accent: #14657e;
+  --sl-accent-deep: #0a3d4d;
+  --sl-accent-soft: #eff3f5;
+  --sl-accent-line: #d4e1e6;
+  --sl-hero: linear-gradient(155deg, #eff3f5 0%, #ffffff 50%, #f2f8f9 100%);
+  --sl-hero-orb: rgb(20 101 126 / 0.2);
+  --sl-pattern-size: 48px;
+  --sl-pattern-color: rgb(20 101 126 / 0.06);
+}
+
+/* مكافحة الحشرات — technical, amber-warned */
+.sl--pest {
+  --sl-accent: #0a7d78;
+  --sl-accent-deep: #05504d;
+  --sl-accent-soft: #f0f7f6;
+  --sl-accent-line: #cfe6e3;
+  --sl-hero: linear-gradient(155deg, #f0f7f6 0%, #ffffff 52%, #fdf7ea 100%);
+  --sl-hero-orb: rgb(217 136 12 / 0.18);
+  --sl-band: linear-gradient(140deg, #05504d 0%, #073b4c 60%, #0a7d78 130%);
+  --sl-pattern-size: 36px;
+  --sl-pattern-color: rgb(10 125 120 / 0.07);
+}
+
+/* Shared decorative grid used by the hero and band sections. */
+.sl-pattern {
+  background-image:
+    linear-gradient(var(--sl-pattern-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--sl-pattern-color) 1px, transparent 1px);
+  background-size: var(--sl-pattern-size) var(--sl-pattern-size);
+}
